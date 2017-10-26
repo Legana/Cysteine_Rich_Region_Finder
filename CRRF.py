@@ -46,4 +46,4 @@ for record in SeqIO.parse(args.infile, "fasta"):
             CRRFound = True;
 
 #print sequence ID, the maximum number of cysteines (CRR index) and presence of CRR
-    print record.id + "\t" + str(max_c_count) + "\t" + str(CRRFound)
+print record.id + "\t" + str(max_c_count) + "\t" + str(CRRFound)
