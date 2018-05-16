@@ -1,16 +1,15 @@
 # Cysteine rich region finder (CCRF)
 
-Default settings are to count the maximum number of cysteines in a window size of 30 advancing by 1 frame (amino acid) at a time
+The CRRF analyses protein sequences in a FASTA format and counts the number of cysteines in a given amino acid window.
+It is designed to capture cysteine rich regions in a protein sequence.
 
-To change the window size use the option -w ##
-To change the frame size use the option -f ##
+For usage and arguments use **-h**:
 
-The default setting for the minimum number of cysteines to be considered a cysteine rich region is at 5
-(Output will contain a "True" or "False" for CRRFound)
+```bash
+./CCRF.py -h
+```
 
-To change the number of cysteines considered to be in a cysteine rich region use the option -m ##
-
-# CCRG usage examples
+# CCRF usage examples
 
 #use CCRF with default settings
 ```bash
@@ -34,5 +33,22 @@ To change the number of cysteines considered to be in a cysteine rich region use
 
 #change all default settings
 ```bash
-./CCRF.py -w 60 -m 6 -f 10 myfastafile.fasta
+./CCRF.py -m 6 -w 60 -f 10 myfastafile.fasta
 ```
+
+# Installation and dependencies
+
+Download CCRF.py
+
+Note that CRRF requires Biopython (Cock et al. 2009) which can be obtained at [biopython.org](http://biopython.org/)
+CRRF is written for Python 2.7
+
+# Rational behind CRRF
+
+Cysteine density of two toxin-focused databases: [Tox-Prot](https://www.uniprot.org/program/Toxins) and [ArachnoServer](https://www.uniprot.org/program/Toxins), and one general protein database: [SwissProt](http://www.uniprot.org/) was analysed with CRRF.
+Cysteine density peaked around 6 cysteines in both ArachnoServer and Tox-Prot with a window size of 30, 50, and 100.
+The highest peak occurred in a 30 amino acid window size. 5 cysteines were chosen as default for the CRRF to account for incomplete sequences.
+
+
+![Cysteine density of three protein databases](/images/db_cyst_plot.pdf)
+Format: ![Alt Text](url)
