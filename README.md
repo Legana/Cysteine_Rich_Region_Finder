@@ -41,6 +41,7 @@ For usage and arguments use **-h**:
 Download CCRF.py
 
 Note that CRRF requires Biopython (Cock et al. 2009) which can be obtained at [biopython.org](http://biopython.org/)
+
 CRRF is written for Python 2.7
 
 # Rational behind CRRF
@@ -50,5 +51,5 @@ Cysteine density peaked around 6 cysteines in both ArachnoServer and Tox-Prot wi
 The highest peak occurred in a 30 amino acid window size. 5 cysteines were chosen as default for the CRRF to account for incomplete sequences.
 
 
-![Cysteine density of three protein databases](/images/db_cyst_plot.pdf)
-Format: ![Alt Text](url)
+![Cysteine density of three protein databases](https://github.com/Legana/Cysteine_Rich_Region_Finder/blob/master/db_cys_plot.png)
+
