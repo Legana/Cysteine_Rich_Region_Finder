@@ -11,27 +11,27 @@ For usage and arguments use **-h**:
 
 # CRRF usage examples
 
-#use CRRF with default settings
+#### use CRRF with default settings
 ```bash
 ./CRRF.py myfastafile.fasta
 ```
 
-#change window size from default (30) to 60 amino acids
+#### change window size from default (30) to 60 amino acids
 ```bash
 ./CRRF.py -w 60 myfastafile.fasta
 ```
 
-#change window size and change the cysteine rich index output from default (5) to 6 amino acids
+#### change window size and change the cysteine rich index output from default (5) to 6 amino acids
 ```bash
 ./CRRF.py -w 60 -m 6 myfastafile.fasta
 ```
 
-#change the frame size to advance by 10 amino acids at a time instead of default (1)
+#### change the frame size to advance by 10 amino acids at a time instead of default (1)
 ```bash
 ./CRRF.py -f 10 myfastafile.fasta
 ```
 
-#change all default settings
+#### change all default settings
 ```bash
 ./CRRF.py -m 6 -w 60 -f 10 myfastafile.fasta
 ```
